@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introduction to Ethereum</title>
+        <link rel="stylesheet" href="reveal.js/css/reveal.css" />
+        <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme" />
+        <link rel="stylesheet" href="highlight.js/src/styles/zenburn.css" type="text/css" />
+        <script type="text/javascript" src="reveal.js/lib/js/head.min.js"></script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h2>Introduction to Ethereum</h1>
+                    <h3>Roman Plasil</h3>
+				</section>
+				<section>
+					<h3>What is it</h3>
+					<p>The hardest question in Computer Science...</p>
+					<p class="fragment">blockchain</p>
+					<p class="fragment">... that runs programs (smart contracts)</p>
+				</section>
+				<section>
+					<h3>What is blockchain?</h3>
+					<p class="fragment">a database</p>
+					<p class="fragment">decentralized</p>
+					<p class="fragment">with consensus</p>
+					<p class="fragment">immutable</p>
+					<h3 class="fragment">Bitcoin</h3>
+					<p class="fragment">account balances</p>
+					<p class="fragment">transactions</p>
+				</section>
+				<section>
+					<h3>What IS Ethereum?</h3>
+					<div class="fragment">
+						<p>blockchain database like Bitcoin</p>
+						<ul>
+							<li>transactions</li>
+							<li>account balances</li>
+						</ul>
+					</div>
+					<div class="fragment">
+						<p>with more features!</p>
+						<ul>
+							<li>programs</li>
+							<li>data storage for each program</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h3>Simplest smart contract ever</h3>
+					<code>
+						<pre>
+contract Board {
+	string[] posts;
+	int[] votes;
+	address[] author;
+	uint32 endblock = now + 30 days;
+
+	function post(string text) {
+		if (msg.value != 1 eth) return;
+		posts.append(text);
+		authors.append(msg.sender);
+	}
+	function vote(int index, int up) {
+		if (abs(up) != 1) return;
+		votes[index] += up;
+	}
+	function payout() {
+		if (msg.blockNumber < endblock) return;
+		int ix = max(votes);
+		author[ix].send(this.balance);
+	}
+};
+					</pre>
+					</code>
+				</section>
+				<section>
+					<h3>Smart Contracts are...</h3>
+					<ul>
+						<li>executed with no change (immutability)</li>
+						<li>(almost) autonomous</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Where can Ethereum be used?</h3>
+					<ul>
+						<li>trustless contracts</li>
+						<li class="fragment">immutable datastore (or references)</li>
+						<li class="fragment">autonomous organisations</li>
+						<li class="fragment">democracy / governance</li>
+						<li class="fragment">next gen distributed webapps</li>
+						<li class="fragment">who knows actually</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<li>alekto</li>
+						<li>etherum.org</li>
+					</ul>
+				</section>
+				<section>
+					<h3>More info</h3>
+					<p>www.ethereum.org</p>
+					<p>blog.ethereum.org</p>
+					<p>Hong Kong Ethereum Meetup</p>
+					<p>reddit.com/r/ethereum</p>
+				</section>
+			</div>
+		</div>
+		<!--
+	
+		* what is ethereum
+		* what can it do
+			* DAO, democracy
+			* gambling
+			* exchange, prediction market
+		* run some code
+		* contacts
+			* reddit
+			* blog
+			* meetup
+
+		-->
+        <script type="text/javascript" src="reveal.js/js/reveal.js"></script>
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+			//parallaxBackgroundImage: "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg",
+			//parallaxBackgroundSize: '2100px 900px',
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                //transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                transition: 'linear',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+                // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+	</body>
+</html>
