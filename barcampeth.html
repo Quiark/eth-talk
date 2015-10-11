@@ -20,6 +20,7 @@
 					<p class="fragment">blockchain</p>
 					<p class="fragment">... that runs programs (smart contracts)</p>
 				</section>
+
 				<section>
 					<h3>What is blockchain?</h3>
 					<p class="fragment">a database</p>
@@ -30,6 +31,7 @@
 					<p class="fragment">with consensus</p>
 					<p class="fragment">immutable history</p>
 				</section>
+
 				<section>
 					<h3>What IS Ethereum?</h3>
 					<div class="fragment">
@@ -47,6 +49,7 @@
 						</ul>
 					</div>
 				</section>
+
 				<section>
 					<h3>Simplest smart contract ever</h3>
 					<code>
@@ -68,20 +71,27 @@ contract Board {
 	}
 	function payout() {
 		if (msg.blockNumber < endblock) return;
-		int ix = max(votes);
+		int ix = indexOfMax(votes);
 		author[ix].send(this.balance);
 	}
 };
 					</pre>
 					</code>
 				</section>
+
 				<section>
 					<h3>Smart Contracts are...</h3>
 					<ul>
 						<li>executed with no change (immutability)</li>
 						<li>(almost) autonomous</li>
+						<li class="fragment">protect you from yourself</li>
+						<ul class="fragment">
+						    <li>weak hands</li>
+						    <li class="fragment">committing to send payment at a time</li>
+						</ul>
 					</ul>
 				</section>
+				
 				<section>
 					<h3>Where can Ethereum be used?</h3>
 					<ul>
@@ -93,6 +103,20 @@ contract Board {
 						<li class="fragment">who knows actually</li>
 					</ul>
 				</section>
+
+				<section>
+					<h3>Where can Ethereum be used?</h3>
+					<ul>
+						<li>Augur - prediction market</li>
+						<li>DigixGlobal - gold ownership tokens</li>
+						<li>Dynamis - insurance</li>
+						<li>Colony - distributed organisation</li>
+						<li>Provenance - product origin verification</li>
+						<li>crowdfunding</li>
+						<li>pyramid schemes and casinos</li>
+					</ul>
+				</section>
+
 				<section>
 					<h3>Testing wifi</h3>
 					<ul>
@@ -101,6 +125,7 @@ contract Board {
 						<li>RPC host: 10.0.0.1</li>
 					</ul>
 				</section>
+				
 				<section>
 					<h3>More info</h3>
 					<p>www.ethereum.org</p>
@@ -110,20 +135,7 @@ contract Board {
 				</section>
 			</div>
 		</div>
-		<!--
-	
-		* what is ethereum
-		* what can it do
-			* DAO, democracy
-			* gambling
-			* exchange, prediction market
-		* run some code
-		* contacts
-			* reddit
-			* blog
-			* meetup
 
-		-->
         <script type="text/javascript" src="reveal.js/js/reveal.js"></script>
         <script>
 
