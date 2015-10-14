@@ -13,47 +13,59 @@
                 <section>
                     <h2>Introduction to Ethereum</h1>
                     <h3>Roman Plasil</h3>
-				</section>
-				<section>
-					<h3>What is it</h3>
-					<p>The hardest question in Computer Science...</p>
-					<p class="fragment">blockchain</p>
-					<p class="fragment">... that runs programs (smart contracts)</p>
-				</section>
+		</section>
+		<section>
+			<h3>What is it</h3>
+			<p>The hardest question in Computer Science...</p>
+			<p class="fragment">blockchain</p>
+			<p class="fragment">... that runs programs (smart contracts)</p>
+		</section>
 
-				<section>
-					<h3>What is blockchain?</h3>
-					<p class="fragment">a database</p>
-					<aside class="notes">
-						mention what bitcoin has in the database (accounts, txs)
-					</aside>
-					<p class="fragment">decentralized</p>
-					<p class="fragment">with consensus</p>
-					<p class="fragment">immutable history</p>
-				</section>
+		<section>
+			<h3>What is blockchain?</h3>
+			<p class="fragment">a database</p>
+			<aside class="notes">
+				mention what bitcoin has in the database (accounts, txs)
+			</aside>
+			<p class="fragment">decentralized</p>
+			<p class="fragment">with consensus</p>
+			<p class="fragment">immutable history</p>
+		</section>
 
-				<section>
-					<h3>What IS Ethereum?</h3>
-					<div class="fragment">
-						<p>blockchain database like Bitcoin</p>
-						<ul>
-							<li>transactions</li>
-							<li>account balances</li>
-						</ul>
-					</div>
-					<div class="fragment">
-						<p>with more features!</p>
-						<ul>
-							<li>programs</li>
-							<li>data storage for each program</li>
-						</ul>
-					</div>
-				</section>
+		<section>
+			<h3>What IS Ethereum?</h3>
+			<div class="fragment">
+				<p>blockchain database like Bitcoin</p>
+				<ul>
+					<li>transactions</li>
+					<li>account balances</li>
+				</ul>
+			</div>
+			<div class="fragment">
+				<p>with more features!</p>
+				<ul>
+					<li>programs</li>
+					<li>program storage</li>
+				</ul>
+			</div>
+		</section>
 
-				<section>
-					<h3>Simplest smart contract ever</h3>
-					<code>
-						<pre>
+		<section>
+			<h3>Execution model</h3>
+			<table>
+			<tr>
+			<td><b>in:</b></td><td> program storage  account balances  transaction data</td>
+			<td><b>out:</b></td><td> program storage  more transactions</td>
+			</tr>
+			</table>
+			<div>run by every single node</div>
+			<div>&rarr; reliability</div>
+		</section>
+
+		<section>
+			<h3>Simplest smart contract ever</h3>
+			<code>
+				<pre>
 contract Board {
 	string[] posts;
 	int[] votes;
@@ -75,66 +87,73 @@ contract Board {
 		author[ix].send(this.balance);
 	}
 };
-					</pre>
-					</code>
-				</section>
+			</pre>
+			</code>
+		</section>
 
-				<section>
-					<h3>Smart Contracts are...</h3>
-					<ul>
-						<li>executed with no change (immutability)</li>
-						<li>(almost) autonomous</li>
-						<li class="fragment">protect you from yourself</li>
-						<ul class="fragment">
-						    <li>weak hands</li>
-						    <li class="fragment">committing to send payment at a time</li>
-						</ul>
-					</ul>
-				</section>
-				
-				<section>
-					<h3>Where can Ethereum be used?</h3>
-					<ul>
-						<li>trustless contracts</li>
-						<li class="fragment">immutable datastore (or references)</li>
-						<li class="fragment">autonomous organisations</li>
-						<li class="fragment">democracy / governance</li>
-						<li class="fragment">next gen distributed webapps</li>
-						<li class="fragment">who knows actually</li>
-					</ul>
-				</section>
+		<section>
+			<h3>Smart Contracts are new<h3>
+			<ul>
+				<li>executed with no change</li>
+				<li>(almost) autonomous</li>
+				<li>can own money</li>
+			</ul>
+		</section>
 
-				<section>
-					<h3>Where can Ethereum be used?</h3>
-					<ul>
-						<li>Augur - prediction market</li>
-						<li>DigixGlobal - gold ownership tokens</li>
-						<li>Dynamis - insurance</li>
-						<li>Colony - distributed organisation</li>
-						<li>Provenance - product origin verification</li>
-						<li>crowdfunding</li>
-						<li>pyramid schemes and casinos</li>
-					</ul>
-				</section>
+		<section>
+			<h3>Example</h3>
+			<ul>
+				<li>can protect you from yourself</li>
+				<ul class="fragment">
+				    <li>weak hands</li>
+				    <li class="fragment">committing to send payment at a time</li>
+				</ul>
+			</ul>
+		</section>
+		
+		<section>
+			<h3>Where can Ethereum be used?</h3>
+			<ul>
+				<li>trustless contracts</li>
+				<li class="fragment">immutable datastore (or references)</li>
+				<li class="fragment">autonomous organisations</li>
+				<li class="fragment">democracy / governance</li>
+				<li class="fragment">next gen distributed webapps</li>
+				<li class="fragment">who knows actually</li>
+			</ul>
+		</section>
 
-				<section>
-					<h3>Testing wifi</h3>
-					<ul>
-						<li>SSID: alekto</li>
-						<li>pass: etherum.org</li>
-						<li>RPC host: 10.0.0.1</li>
-					</ul>
-				</section>
-				
-				<section>
-					<h3>More info</h3>
-					<p>www.ethereum.org</p>
-					<p>blog.ethereum.org</p>
-					<p>Hong Kong Ethereum Meetup</p>
-					<p>reddit.com/r/ethereum</p>
-				</section>
-			</div>
-		</div>
+		<section>
+			<h3>Where can Ethereum be used?</h3>
+			<ul>
+				<li>Augur - prediction market</li>
+				<li>DigixGlobal - gold ownership tokens</li>
+				<li>Dynamis - insurance</li>
+				<li>Colony - distributed organisation</li>
+				<li>Provenance - product origin verification</li>
+				<li>crowdfunding</li>
+				<li>pyramid schemes and casinos</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Testing wifi</h3>
+			<ul>
+				<li>SSID: alekto</li>
+				<li>pass: etherum.org</li>
+				<li>RPC host: 10.0.0.1</li>
+			</ul>
+		</section>
+		
+		<section>
+			<h3>More info</h3>
+			<p>www.ethereum.org</p>
+			<p>blog.ethereum.org</p>
+			<p>Hong Kong Ethereum Meetup</p>
+			<p>reddit.com/r/ethereum</p>
+		</section>
+	</div>
+</div>
 
         <script type="text/javascript" src="reveal.js/js/reveal.js"></script>
         <script>
@@ -150,14 +169,12 @@ contract Board {
                 center: true,
 
                 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-                //transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-                transition: 'linear',
+                transition: 'fade',
 
                 // Optional libraries used to extend on reveal.js
                 dependencies: [
                 { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
                 { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                 { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                 { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
                 { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
